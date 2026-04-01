@@ -44,7 +44,7 @@ def a1_or_a2(K = 5,distribution = f.make_distribution(5),save_fig = True):
             ax.plot(each_average[i],i,marker = "o",color = "black")
         ax.set_box_aspect(1)
         plt.savefig(f"graphs/graph(a1_or_a2).png",dpi = 600, bbox_inches="tight")
-    return count
+    return count,distribution.index(max(distribution)) == each_average.index(max(each_average))
     
 
 if __name__ == "__main__":
